@@ -6,7 +6,7 @@ var keyboardScrollDisabled = false;
 
 inputPane.addEventListener('hiding', function() {
     cordova.fireWindowEvent('native.keyboardhide');
-    cordova.plugins.Keyboard.isVisible = false;
+    cordova.plugins.KeyboardUtils.isVisible = false;
 });
 
 inputPane.addEventListener('showing', function(e) {
@@ -15,7 +15,7 @@ inputPane.addEventListener('showing', function(e) {
         e.ensuredFocusedElementInView = true;
     }
     cordova.fireWindowEvent('native.keyboardshow', { keyboardHeight: e.occludedRect.height });
-    cordova.plugins.Keyboard.isVisible = true;
+    cordova.plugins.KeyboardUtils.isVisible = true;
 });
 
 module.exports.disableScroll = function (disable) {
