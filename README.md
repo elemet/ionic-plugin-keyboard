@@ -1,4 +1,6 @@
-# Used as `disableScroll` was removed from [`cordova-plugin-ionic-keyboard`](https://github.com/ionic-team/cordova-plugin-ionic-keyboard)
+# Reasons for Wattcost use:
+- Used as `disableScroll` was removed from [`cordova-plugin-ionic-keyboard`](https://github.com/ionic-team/cordova-plugin-ionic-keyboard)
+- Renamed namespace from `cordova.plugins.Keyboard` to `cordova.plugins.KeyboardUtils` to prevent detection by Ionic-v1, which was breaking iOS Keychain autofill
 ## Forked to apply fixes:
   - Hardware keyboard auto-blur: https://github.com/ionic-team/ionic-plugin-keyboard/pull/290
 
