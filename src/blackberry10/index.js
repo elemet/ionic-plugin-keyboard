@@ -31,11 +31,11 @@ module.exports = {
 };
 
 keyboardShow = function(a){
-	_webview.executeJavascript("cordova.plugins.Keyboard.isVisible = true");
+	_webview.executeJavascript("cordova.plugins.KeyboardUtils.isVisible = true");
 	_webview.executeJavascript("cordova.fireDocumentEvent('native.keyboardshow',"+a+")");
 };
 keyboardHide = function(){
-	_webview.executeJavascript("cordova.plugins.Keyboard.isVisible = false");
+	_webview.executeJavascript("cordova.plugins.KeyboardUtils.isVisible = false");
 	_webview.executeJavascript("cordova.fireDocumentEvent('native.keyboardhide','')");
 };
 onStart = function() {
